@@ -1,0 +1,91 @@
+.ph-section {
+  padding: 70px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #fdfbfb, #f5eaea);
+}
+
+/* Heading */
+.ph-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: 2px;
+}
+
+.ph-subtitle {
+  color: #666;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+/* Gallery wrapper */
+.ph-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+/* Arch card */
+.ph-arch {
+  width: 190px;
+  height: 260px;
+  border-radius: 120px 120px 0 0;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.arch-center {
+  width: 260px;
+  height: 340px;
+  border-radius: 150px 150px 0 0;
+}
+
+/* Background colors for each arch */
+.arch1 { background: #c79078; }
+.arch2 { background: #f33626; }
+.arch-center { background: #0a1324; }
+.arch4 { background: #dad9d9; }
+.arch5 { background: #6f0033; }
+
+/* Image inside arches */
+.ph-img {
+  width: 110%;
+  object-fit: contain;
+  transform: translateY(10px);
+}
+
+/* Big image */
+.arch-center .ph-img {
+  width: 130%;
+  transform: translateY(20px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .arch-center {
+    width: 220px;
+    height: 290px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ph-gallery {
+    gap: 14px;
+  }
+
+  .ph-arch {
+    width: 140px;
+    height: 200px;
+  }
+
+  .arch-center {
+    width: 180px;
+    height: 240px;
+  }
+}

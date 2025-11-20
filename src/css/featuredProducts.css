@@ -1,0 +1,114 @@
+/* container */
+.fp-section {
+  padding: 28px 18px 44px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/* Title */
+.fp-title {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 18px;
+  color: #111;
+  font-weight: 600;
+}
+
+/* grid */
+.fp-grid{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 12px;
+  align-items: start;
+}
+
+/* card */
+.fp-card{
+  background: #f8f8f8;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.fp-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(18,18,18,0.08);
+}
+
+/* discount badge */
+.fp-badge{
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  background: #f3b6b8;
+  color: #7d2a2e;
+  font-size: 11px;
+  padding: 4px 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  z-index: 3;
+}
+
+/* image area */
+.fp-image{
+  background: #fff;
+  padding: 22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height: 260px; /* keeps consistent height */
+}
+.fp-image img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display:block;
+}
+
+/* body */
+.fp-body{
+  padding: 12px 16px 18px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+/* product name */
+.fp-name{
+  font-size: 13px;
+  color: #222;
+  margin:0;
+  min-height: 40px;
+  line-height: 1.2;
+}
+
+/* stars */
+.stars{ display:flex; gap:4px; align-items:center; font-size:12px; color:#f6b22b; }
+.star{ color:#f6b22b; }
+.star.empty{ color:#e6e6e6; }
+
+/* price row */
+.fp-price-row{ display:flex; gap:8px; align-items:center; margin-top:4px; }
+.fp-old{ color:#b5b5b5; font-size:13px; text-decoration: line-through; }
+.fp-price{ color:#d25a59; font-weight:700; font-size:14px; }
+
+/* responsive breakpoints */
+@media (max-width: 1100px){
+  .fp-grid{ grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 820px){
+  .fp-grid{ grid-template-columns: repeat(2, 1fr); }
+  .fp-image{ height: 220px; padding: 18px; }
+}
+@media (max-width: 480px){
+  .fp-grid{ grid-template-columns: 1fr; gap: 14px; }
+  .fp-image{ height: 200px; padding: 12px; }
+  .fp-title{ font-size: 18px; }
+  .fp-card{ border-radius: 6px; }
+  .fp-body{ padding: 10px; }
+}
