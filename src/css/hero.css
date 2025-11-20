@@ -1,0 +1,150 @@
+:root{
+  --pink-1: #d6a0a6;
+  --pink-2: #f1d7d9;
+  --text: #111;
+  --muted: #6b6b6b;
+  --accent: #eaa8ab;
+  --cta-bg: #f3b6b8;
+}
+
+/* HERO wrapper */
+.hero-wrap{
+  position: relative;
+  overflow: visible;
+  padding: 30px 18px 80px;
+  background: #fff;
+}
+
+/* Decorative arcs */
+.hero-arc{ position:absolute; left:0; right:0; width:100%; z-index:0; pointer-events:none; }
+.hero-arc.top-arc{ top: -20px; height: 220px; }
+.hero-arc.bottom-arc{ bottom: -40px; height: 260px; }
+
+/* Main container */
+.hero-container{
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px 360px;
+  gap: 12px;
+  align-items: center;
+  padding-top: 20px;
+}
+
+/* LEFT */
+.hero-left{
+  padding: 10px 18px;
+}
+.brand-title{
+  font-family: 'Times New Roman', serif;
+  font-size: 84px;
+  letter-spacing: 22px;
+  margin: 0 0 18px 0;
+  color: var(--text);
+  line-height: 0.9;
+}
+
+/* promo small card */
+.promo-row{ margin-bottom: 20px; }
+.promo-card.small{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 10px;
+  width: 320px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border-radius: 6px;
+}
+.promo-card.small .prod-thumb{
+  width: 62px;
+  height:62px;
+  object-fit:cover;
+  border-radius:4px;
+}
+.prod-meta .prod-title{ font-weight:700; font-size:13px; color:var(--text); }
+.prod-meta .prod-price{ font-weight:700; color:#b84b5d; margin-top:6px; font-size:13px; }
+
+/* main paragraph and CTA */
+.hero-text{
+  color: var(--muted);
+  max-width: 520px;
+  margin: 12px 0 20px 0;
+  line-height: 1.6;
+  font-size: 14px;
+}
+.cta-btn{
+  background: #f2b7ba;
+  color: #111;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 700;
+  box-shadow: 0 6px 0 rgba(0,0,0,0.06);
+  cursor: pointer;
+}
+
+/* CENTER model */
+.hero-center{
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+  padding-bottom: 10px;
+}
+.model-img{
+  width: 360px;
+  max-width: 100%;
+  display:block;
+  object-fit: contain;
+  transform: translateY(6px);
+}
+
+/* RIGHT */
+.hero-right{
+  padding: 8px 18px;
+  display:flex;
+  flex-direction:column;
+  gap: 18px;
+  align-items:flex-start;
+}
+.right-card{ width: 300px; align-self: flex-end; }
+.available-on{ align-self: flex-end; text-align: right; margin-top: 10px; }
+.available-text{ font-weight:600; margin-bottom:-16px; color:var(--text); }
+.retail-logos{ display:flex; gap:12px; align-items:center; justify-content:flex-end; }
+.retail-logos img{ width:72px; height:auto; display:block; object-fit:contain; filter: none; }
+
+/* Small helpers */
+@media (max-width: 1150px){
+  .hero-container{ grid-template-columns: 1fr 360px 300px; gap:20px; padding-top: 12px; }
+  .brand-title{ font-size: 70px; letter-spacing:18px; }
+  .model-img{ width: 320px; }
+}
+@media (max-width: 920px){
+  .hero-container{ grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 18px; padding-top: 10px; }
+  .hero-center{ order: 2; justify-content: center; }
+  .hero-right{ order: 3; align-items: center; text-align:center; }
+  .right-card{ align-self:center; }
+  .available-on{ align-self:center; text-align:center; }
+  .brand-title{ font-size: 64px; letter-spacing: 14px; }
+}
+
+@media (max-width: 700px){
+  .hero-container{ display:flex; flex-direction:column; gap:12px; align-items:center; padding-top: 6px; }
+  .brand-title{ font-size: 48px; letter-spacing: 10px; text-align:center; margin-top: 10px; }
+  .hero-left{ text-align:center; padding: 0 12px; }
+  .hero-text{ max-width: 100%; font-size: 14px; padding: 0 8px; }
+  .cta-btn{ margin: 12px auto 8px; }
+  .promo-card.small, .right-card{ width: 88%; max-width: 320px; }
+  .model-img{ width: 60%; max-width: 280px; transform: none; }
+  .retail-logos img{ width:56px; }
+}
+
+/* tiny screens */
+@media (max-width: 420px){
+  .brand-title{ font-size: 36px; letter-spacing: 8px; }
+  .model-img{ width: 70%; }
+  .promo-card.small{ padding:8px; }
+}
